@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/zhuye.css">
+</head>
+<body>
+    <div class="boxs">
+        <div class="boxs_1">
+            <div class="wei">
+                <div class="title">
+                    <p>未关闭的任务</p>
+                </div>
+               <div class="list">
+
+                <table>
+                    <tr>
+                        <td>线索名称</td>
+                        <td>公司</td>
+                        <td>邮箱</td>
+                        <td>电话</td>
+                        <td>线索来源</td>
+                        <td>线索所有者</td> 
+                    </tr>
+                    <tr>
+                            <td><a>倩倩 郑</a></td>
+                            <td>秋实远客创新有限公司</td>
+                            <td><a>Lezlie-craghead@163.org</a></td>
+                            <td>555-555-5555</td>
+                            <td>交易会</td>
+                            <td><span>第一小组<span></td>       
+                        </tr>
+                        <tr>
+                                <td><a>倩倩 郑</a></td>
+                                <td>秋实远客创新有限公司</td>
+                                <td><a>Lezlie-craghead@163.org</a></td>
+                                <td>555-555-5555</td>
+                                <td>交易会</td>
+                                <td><span>第一小组<span></td>       
+                            </tr>
+                            <tr>
+                                    <td><a>倩倩 郑</a></td>
+                                    <td>秋实远客创新有限公司</td>
+                                    <td><a>Lezlie-craghead@163.org</a></td>
+                                    <td>555-555-5555</td>
+                                    <td>交易会</td>
+                                    <td><span>第一小组<span></td>       
+                                </tr>
+                                <tr>
+                                        <td><a>倩倩 郑</a></td>
+                                        <td>秋实远客创新有限公司</td>
+                                        <td><a>Lezlie-craghead@163.org</a></td>
+                                        <td>555-555-5555</td>
+                                        <td>交易会</td>
+                                        <td><span>第一小组<span></td>       
+                                    </tr>
+                                    <tr>
+                                            <td><a>倩倩 郑</a></td>
+                                            <td>秋实远客创新有限公司</td>
+                                            <td><a>Lezlie-craghead@163.org</a></td>
+                                            <td>555-555-5555</td>
+                                            <td>交易会</td>
+                                            <td><span>第一小组<span></td>       
+                                        </tr>
+                </table>
+               </div>
+               <div class="fenye">
+                   <i><</i>1到5<i>></i>
+               </div>
+            </div>
+            <div class="jin">
+                <div class="title">
+                    <p>今日线索</p>
+                </div>
+                <div class="list">
+                    <table>
+                        <tr>
+                            <td>线索名称</td>
+                            <td>公司</td>
+                            <td>邮箱</td>
+                            <td>电话</td>
+                            <td>线索来源</td>
+                            <td>线索所有者</td> 
+                        </tr>
+                        <tr>
+                            <td><a>倩倩 郑</a></td>
+                            <td>秋实远客创新有限公司</td>
+                            <td><a>Lezlie-craghead@163.org</a></td>
+                            <td>555-555-5555</td>
+                            <td>交易会</td>
+                            <td><span>第一小组<span></td>       
+                        </tr>
+                    </table>
+               </div>
+               <div class="fenye">
+                    <i><</i>1到5<i>></i>
+                </div>
+            </div>
+        </div>
+        <div class="boxs_2">
+            <div class="title">金额-阶段 <i></i></div>
+            <div id="chartContainer"></div>
+        </div>
+    </div>
+</body>
+</html>
+ <script src="echarts-2.2.7/build/dist/echarts.js"></script> 
+ <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script> 
+ <script type="text/javascript">  
+    //配置路径  
+          require.config({  
+              paths: {  
+                  echarts: 'echarts-2.2.7/build/dist'  
+              }  
+          });  
+    
+    
+      //开始使用  
+      require(  
+              [  
+                  'echarts',  
+                  'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载  
+              ],  
+              function (ec) {  
+                  // 基于准备好的dom，初始化echarts图表  
+                  var myChart = ec.init(document.getElementById('chartContainer')); 
+                  console.log(myChart);  
+                    
+                  var option = {  
+                      tooltip: {  
+                          show: true  
+                      },  
+                      legend: {  
+                          data:['金额-阶段']  
+                      },  
+                      xAxis : [  
+                          {  
+                              type : 'category',  
+                              data : ["资质审查","需求分析","价值建议","确定决策者","提案/报价","谈判复审","丢失的线索","成交"]  ,
+                          },
+                      ],  
+                      yAxis : [  
+                          {  
+                              type : 'value'  
+                          }  
+                      ],  
+                      series : [  
+                          {  
+                              "name":"金额-阶段",  
+                              "type":"bar",  
+                              "data":[25000000, 10000000, 7000000, 10500000, 2500000, 7000000,4500000,3500000]  
+                          }  
+                      ]  
+                  };  
+            
+                  // 为echarts对象加载数据   
+                  myChart.setOption(option);   
+              }  
+          );  
+                        
+        
+    </script>  
+
