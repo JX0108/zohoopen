@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/zhuye.css">
 </head>
+
 <body>
     <div class="boxs">
         <div class="boxs_1">
@@ -14,154 +16,233 @@
                 <div class="title">
                     <p>未关闭的任务</p>
                 </div>
-               <div class="list">
-
-                <table>
-                    <tr>
-                        <td>线索名称</td>
-                        <td>公司</td>
-                        <td>邮箱</td>
-                        <td>电话</td>
-                        <td>线索来源</td>
-                        <td>线索所有者</td> 
-                    </tr>
-                    <tr>
-                    <td><a>倩倩 郑</a></td>
-                    <td>秋实远客创新有限公司</td>
-                    <td><a>Lezlie-craghead@163.org</a></td>
-                    <td>555-555-5555</td>
-                    <td>交易会</td>
-                    <td><span>第一小组<span></td>       
-                    </tr>
-                        
-                </table>
-               </div>
-               <div class="fenye">
-                   <i><</i>1<span>到<span>5<i>></i>
-               </div>
-            </div>
-            <div class="jin">
-                <div class="title">
-                    <p>今日线索</p>
-                </div>
                 <div class="list">
-                    <table>
+
+                    <table id="xians">
                         <tr>
                             <td>线索名称</td>
                             <td>公司</td>
                             <td>邮箱</td>
                             <td>电话</td>
                             <td>线索来源</td>
-                            <td>线索所有者</td> 
+                            <td>线索所有者</td>
                         </tr>
                         <tr>
-                            <td><a>倩倩 郑</a></td>
+                            <td>
+                                <a>倩倩 郑</a>
+                            </td>
                             <td>秋实远客创新有限公司</td>
-                            <td><a>Lezlie-craghead@163.org</a></td>
+                            <td>
+                                <a>Lezlie-craghead@163.org</a>
+                            </td>
                             <td>555-555-5555</td>
                             <td>交易会</td>
-                            <td><span>第一小组<span></td>       
+                            <td>
+                                <span>第一小组
+                                    <span>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="fenye">
+                    <i>
+                        <</i>1
+                            <span>到</span> 5
+                            <i>></i>
+                </div>
+            </div>
+            <div class="jin">
+                <div class="title">
+                    <p>今日线索</p>
+                </div>
+                <div class="list">
+                    <table id="jin">
+                        <tr>
+                            <td>线索名称</td>
+                            <td>公司</td>
+                            <td>邮箱</td>
+                            <td>电话</td>
+                            <td>线索来源</td>
+                            <td>线索所有者</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a>倩倩 郑</a>
+                            </td>
+                            <td>秋实远客创新有限公司</td>
+                            <td>
+                                <a>Lezlie-craghead@163.org</a>
+                            </td>
+                            <td>555-555-5555</td>
+                            <td>交易会</td>
+                            <td>
+                                <span>第一小组
+                                    <span>
+                            </td>
                         </tr>
                     </table>
-               </div>
-               <div class="fenye">
-                    <i><</i>1<span>到</span>5<i>></i>
+                </div>
+                <div class="fenye">
+                    <i>
+                        <</i>1
+                            <span>到</span> 5
+                            <i>></i>
                 </div>
             </div>
         </div>
         <div class="boxs_2">
-            <div class="title">金额-阶段 <i></i></div>
+            <div class="title">金额-阶段
+                <i></i>
+            </div>
             <div id="chartContainer"></div>
         </div>
         <div class="boxs_3">
             <div class="jiaoyi">
-                    <div class="title">
-                        <p>今日线索</p>
-                    </div>
-                    <div class="list">
-                        <table>
-                            <tr>
-                                <td>交易名称</td>
-                                <td>金额</td>
-                                <td>阶段</td>
-                                <td>预计成交日期</td>
-                                <td>客户名称</td>
-                                <td>联系人名称</td>
-                                <td>交易所有者</td> 
-                            </tr>
-                            <tr>
-                                <td><a>倩倩 郑</a></td>
-                                <td>秋实远客创新有限公司</td>
-                                <td><a>Lezlie-craghead@163.org</a></td>
-                                <td>555-555-5555</td>
-                                <td>交易会</td>
-                                <td><span>第一小组<span></td>       
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="fenye">
-                        <i><</i>1<span>到</span>5<i>></i>
-                    </div>
+                <div class="title">
+                    <p>本月关闭</p>
+                </div>
+                <div class="list">
+                    <table id="jiaoyi">
+                        <tr>
+                            <td>交易名称</td>
+                            <td>金额</td>
+                            <td>阶段</td>
+                            <td>预计成交日期</td>
+                            <td>客户名称</td>
+                            <td>联系人名称</td>
+                            <td>交易所有者</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="fenye">
+                    <i>
+                        <</i>1
+                            <span>到</span>5
+                            <i>></i>
+                </div>
             </div>
-            
+
         </div>
     </div>
 </body>
-</html>
- <script src="echarts-2.2.7/build/dist/echarts.js"></script> 
- <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script> 
- <script type="text/javascript">  
-    //配置路径  
-          require.config({  
-              paths: {  
-                  echarts: 'echarts-2.2.7/build/dist'  
-              }  
-          });  
-    
-    
-      //开始使用  
-      require(  
-              [  
-                  'echarts',  
-                  'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载  
-              ],  
-              function (ec) {  
-                  // 基于准备好的dom，初始化echarts图表  
-                  var myChart = ec.init(document.getElementById('chartContainer')); 
-                  console.log(myChart);  
-                    
-                  var option = {  
-                      tooltip: {  
-                          show: true  
-                      },  
-                      legend: {  
-                          data:['金额-阶段']  
-                      },  
-                      xAxis : [  
-                          {  
-                              type : 'category',  
-                              data : ["资质审查","需求分析","价值建议","确定决策者","提案/报价","谈判复审","丢失的线索","成交"]  ,
-                          },
-                      ],  
-                      yAxis : [  
-                          {  
-                              type : 'value'  
-                          }  
-                      ],  
-                      series : [  
-                          {  
-                              "name":"金额-阶段",  
-                              "type":"bar",  
-                              "data":[25000000, 10000000, 7000000, 10500000, 2500000, 7000000,4500000,3500000]  
-                          }  
-                      ]  
-                  };  
-            
-                  // 为echarts对象加载数据   
-                  myChart.setOption(option);   
-              }  
-          );  
-                        
-        
-    </script>  
 
+</html>
+
+<script typet="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script src="http://cdn.staticfile.org/artTemplate.js/3.0.1/template.js"></script>
+<script src="echarts-2.2.7/build/dist/echarts.js"></script>
+<!-- 获取数据渲染页面模板 -->
+<script type="text/html" id="test">
+{{each data}}
+   <tr>
+       <td><a>{{$value.username}}</a></td>
+       <td>{{$value.options}}</td>
+       <td><a>{{$value.email}}</a></td>
+       <td>{{$value.phone}}</td>
+       <td>{{$value.come}}</td>
+       <td><span>{{$value.have}}<span></td>
+    </tr>
+   {{/each}}
+</script>
+<script type="text/html" id="test2">
+    {{each data}}
+       <tr>
+           <td><a>{{$value.jyname}}</a></td>
+           <td>{{$value.money}}</td>
+           <td><a>{{$value.stage}}</a></td>
+           <td>{{$value.yujitime}}</td>
+           <td>{{$value.username}}</td>
+           <td>{{$value.lianxi}}</td>
+           <td><span>{{$value.have}}<span></td>
+        </tr>
+       {{/each}}
+    </script>
+<!-- 渲染部分 -->
+<script>
+    // 未关闭，今日线索渲染
+    $.ajax({
+        url: "php/zhuye.api.php",
+        type: "POST",
+        data: {
+            "action": "xians"
+        },
+        dataType: "json",
+        success: function (data, textStatus) {
+            console.log(data);
+            var html = template("test", data);
+            $("#xians").append(html);
+            $("#jin").append(html);
+        },
+        error: function (XMLRequest, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    });
+    // 交易渲染
+    $.ajax({
+        url: "php/zhuye.api1.php",
+        type: "POST",
+        data: {
+            "action": "jiaoyi"
+        },
+        dataType: "json",
+        success: function (data, textStatus) {
+            console.log(data);
+            var html = template("test2", data);
+            $("#jiaoyi").append(html);
+        },
+        error: function (XMLRequest, textStatus, errorThrown) {
+            console.log(errorThrown);
+        }
+    })
+</script>
+ <!-- 数据表插件 -->
+<script type="text/javascript">  
+    //配置路径  
+    require.config({
+        paths: {
+            echarts: 'echarts-2.2.7/build/dist'
+        }
+    });
+    //开始使用  
+    require(
+        [
+            'echarts',
+            'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载  
+        ],
+        function (ec) {
+            // 基于准备好的dom，初始化echarts图表  
+            var myChart = ec.init(document.getElementById('chartContainer'));
+
+            var option = {
+                tooltip: {
+                    show: true
+                },
+                legend: {
+                    data: ['金额-阶段']
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: ["资质审查", "需求分析", "价值建议", "确定决策者", "提案/报价", "谈判复审", "丢失的线索", "成交"],
+                    },
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series: [
+                    {
+                        "name": "金额-阶段",
+                        "type": "bar",
+                        "data": [25000000, 10000000, 7000000, 10500000, 2500000, 7000000, 4500000, 3500000]
+                    }
+                ]
+            };
+
+            // 为echarts对象加载数据   
+            myChart.setOption(option);
+        }
+    );
+</script>
