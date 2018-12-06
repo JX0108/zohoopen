@@ -211,11 +211,17 @@
 </body>
 
 </html>
+<script typet="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 <script>
+    $("#main").load(function () {
+        var mainheight = $(this).contents().find("body").height() + 30;
+        $(this).height(mainheight);
+    });
+
     // 用一个数组保存分页的html名称
     var ifrArr = ['zhuye', 'clue', 'client'];
 
-    var ifr1 = document.getElementById('iframe1');
+    var ifr1 = document.getElementById('main');
     var nav_left = document.getElementById('nav_left');
     var nav_list = nav_left.getElementsByClassName("nav-list");
     for (var i = 0; i < nav_list.length; i++) {
