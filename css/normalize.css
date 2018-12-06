@@ -422,7 +422,7 @@ template {
     display: none;
 }
 body,hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
-body, button, input, select, textarea { font:12px/1.5 tahoma, arial, \5b8b\4f53; }
+body, button, input, select, textarea { font:12px/1.5 tahoma, arial, \5b8b\4f53;font-family: "ProximaNovaRegular",sans-serif; }
 /*h1, h2, h3, h4, h5, h6{ font-size:100%; }*/
 address, cite, dfn, em, var { font-style:normal; }
 code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
@@ -432,10 +432,14 @@ a {
 	color: #333333;
 	text-decoration:none; 
 	font-size: 13px;
-	font-weight: 550;
+	font-family: ProximaNovaRegular,sans-serif;
+
 	}
 a:hover { 
+<<<<<<< HEAD
 	/* color:#f5546f; */
+=======
+>>>>>>> master
 	text-decoration:none; }
 sup { vertical-align:text-top; }
 sub{ vertical-align:text-bottom; }
@@ -448,4 +452,11 @@ outline: none;
 body{
 	font-family: "Microsoft Yahei"!important;
 	font-weight: 500;
+}
+.bluea{
+    color: #2C7BD0;
+}
+.shadow{
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }

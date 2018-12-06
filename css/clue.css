@@ -1,0 +1,216 @@
+#warp{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.clue_top{
+    width:100%;
+    height:65px;
+    margin:0 auto;
+    background-color: #f8f8f8;
+    border-bottom:1px solid #eee;
+}
+.clue_top .close{
+    float: left;
+    clear:both;
+    margin:25px 0 0 21px;
+}
+.clue_top .close .close1{
+    padding:4px 10px;
+    cursor: pointer;
+    border:1px solid #f8f8f8;
+    border-radius: 3px;
+    padding-right: 30px;
+    position: relative;
+    float: left;
+}
+.clue_top .close .close1 i{
+    width:0px;
+    height:0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 9px solid rgb(119,119,119);
+    position: absolute;
+    top:12px;
+    right:9px;
+}
+.clue_top .close .close2{
+    display: none;
+    float: left;
+    position: relative;
+    padding:7px 30px 0 5px;
+    font-size: 14px;
+    color:rgb(119,119,119);
+}
+.clue_top .close .close2 i{
+    display: inline-block;
+    background:url(../images/svgicons_43e8a_.svg) no-repeat 0 -19px;
+    width: 16px;
+    height: 16px;
+    opacity: .5;
+    cursor: pointer;
+    position: absolute;
+    top:6px;
+    right:0;
+}
+.clue_top .add{
+    float: right;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    margin:20px;
+}
+.clue_top .add .toggler a{
+    width: 15px;
+    height: 17px;
+    display: inline-block;
+    background:url(../images/svgicons_43e8a_.svg) 0px 0px no-repeat ;
+    margin:8px 5px;
+}
+.clue_top .add .toggler a:nth-child(1){
+    background-position: -3px -100px;
+}
+.clue_top .add .toggler a:nth-child(2){
+    background-position: -38px -1413px;
+}
+.clue_top .add .toggler a:nth-child(3){
+    width: 19px;
+    height: 22px;
+    cursor: pointer;
+    margin-top: -4px;  
+    background-position: -234px -2417px;
+    margin-right: 25px;
+}
+.clue_top .add .daoru{
+    display: inline-block;
+    margin-right: 15px;
+    height: 31px;
+    vertical-align: top;
+    border: 1px solid rgb(196, 196, 196);
+    border-image: initial;
+    background: rgb(255, 255, 255);
+    padding: 0px;
+    border-radius: 2px;
+}
+.clue_top .add .daoru button{  
+    height: 31px;
+    border:none;
+    float: left;
+    outline: none;
+    cursor: pointer;
+}
+.clue_top .add .daoru .btn1{  
+    width: 31px;
+    text-indent: -9999px;  
+    vertical-align: top;
+    background:url(../images/svgicons_43e8a_.svg) 11px -603px no-repeat;
+    padding: 0px 15px;
+    margin: 0px;   
+}
+.clue_top .add .daoru .btn2{
+    max-width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden; 
+    font-size: 14px; 
+    line-height: 13px;   
+    border-left: 1px solid rgb(196, 196, 196);
+    background: rgb(255, 255, 255);
+    padding:0 18px;
+}
+.clue_top .add .caozuo{
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+    height: 33px;
+    display: inline-block;
+    color: rgb(60, 60, 60);
+    border: 1px solid rgb(196, 196, 196);
+    font-size: 25px;
+    line-height: 18px;
+}
+.clue_btm{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+#clue_left{
+    width: 250px;
+    z-index: 10;
+    overflow: hidden;
+    background-color: #fff;
+    border-right: 1px solid rgb(233, 233, 233);
+    float: left;
+}
+#clue_left .search{
+    width:249px;
+    color: rgb(145, 151, 163);
+    padding: 7px 0px 2px;
+    margin:0 auto;
+    font-size:15px;
+}
+#clue_left .search1{
+    width: 214px;
+    margin:0 auto;
+    position: relative;
+    padding:7px 0;
+}
+#clue_left .search1 i{
+    background: url(../images/svgicons_43e8a_.svg);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top:6px;;
+    right:0;
+}
+#clue_left .search2{
+    width: 214px;
+    margin:0 auto;
+    border-bottom:1px solid #eee;
+    display: none;
+}
+#clue_left .search2 i{
+    background: url(../images/svgicons_43e8a_.svg);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+#clue_left .search2 input{
+    font-size: 14px;
+    padding: 7px 16px 8px 22px;
+    outline: 0;
+    border:none;
+}
+#clue_left .clue_out{
+    width:250px;
+    height:720px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#clue_right{
+    float: left;
+}
+
+
+
+
