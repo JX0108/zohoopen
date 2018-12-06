@@ -8,7 +8,139 @@
     margin:0 auto;
     background-color: #f8f8f8;
     border-bottom:1px solid #eee;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: space-between;
 }
+.clue_top .set_m{
+    width:1440px;
+    overflow: hidden;
+}
+.clue_top .title{
+    float: left;
+    margin-left: 30px;
+    font-size: 19px;
+}
+.clue_top .title h2{
+    line-height: 24px;
+    font-weight: 200;
+}
+.clue_top .btn{
+    float:right;
+    margin:18px 49px;
+}
+.clue_top .btn input{
+    font-size: 16px;
+    padding: 4px 15px;
+    margin-right: 8px;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff!important;
+    color: #3c3c3c;
+    border: 1px solid #c4c4c4;
+}
+.clue_top .btn input:nth-child(1){
+    color: white!important;
+    border-radius: 2px!important;
+    background-color: #42a2eb!important;
+    border: solid 1px #42a2eb!important;
+    box-shadow: none!important;
+}
+.container{
+    padding: 30px;
+    max-width: 1440px;
+    background-color: #fff;
+}
+.container .photo{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.container .photo .con_img{
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
+.container .photo .con_img img{
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+}
+.container .photo .con_img .con_photo{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    margin: auto;
+    z-index: 2;
+    background-color:#000;
+    opacity: 0.4;
+    display: none;
+}
+.container .con_img .con_photo>i{
+    display: block;
+    margin: 0 auto;
+    width: 22px; 
+    height: 20px;
+    background: url(../images/svgicons_43e8a_.svg) no-repeat scroll -176px -323px;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top:30%;
+    left:30%;
+}
+.container .photo .con_img:hover .con_photo{
+    display: block;
+}
+.container .clueDiv{
+    padding-left: 30px!important;
+}
+.container .clueDiv .clue_info{
+    font-size: 17px;
+    color: #666;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.container .clueDiv .clue_content{
+    margin-top: 0!important;
+    min-width: 900px;
+    margin-bottom: 40px;
+    background-color: #fff;
+}
+.container .clueDiv .clue_content>.float_left{
+    float: left;
+}
+.container .floatrow .left_row{
+    width:650px;
+    height:50px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.container .floatrow .left_row .labelDiv{
+    float: left;
+    padding: 19px 0 6px 0;
+    width:40%;
+    color: #666;
+    font-size: 16px;
+}
+.container .floatrow .left_row .cons{
+    width:390px;
+    float:left;
+    color: #222;
+    padding-top:19px;
+}
+.container .floatrow .left_row .cons input{
+    width:100%;
+    height:21px;  
+    padding-bottom: 10px;
+}
+.floatrow .left_row:hover .cons{
+    border-bottom: 1px solid #666;
+}
+.container .clueDiv .clue_content .float_right{
+    float: left;
+    margin-left: 80px;
+}
+.clear{
+    clear: both;
+}
+
