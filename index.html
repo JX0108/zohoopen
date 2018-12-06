@@ -203,7 +203,7 @@
     </ul>
 </nav>
 <div class="iframindex">
-    <iframe src="paging/zhuye.html" frameborder="0" id="iframe1" width="100%" height="100%"></iframe>
+    <iframe src="zhuye.html" frameborder="0" id="iframe1" width="100%" height="100%"></iframe>
 </div>
 
 <body>
@@ -213,15 +213,14 @@
 </html>
 <script typet="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 <script>
-    $("#main").load(function () {
+    $("#iframe1").load(function () {
         var mainheight = $(this).contents().find("body").height() + 30;
         $(this).height(mainheight);
     });
 
     // 用一个数组保存分页的html名称
     var ifrArr = ['zhuye', 'clue', 'client'];
-
-    var ifr1 = document.getElementById('main');
+    var ifr1 = document.getElementById('iframe1');
     var nav_left = document.getElementById('nav_left');
     var nav_list = nav_left.getElementsByClassName("nav-list");
     for (var i = 0; i < nav_list.length; i++) {
