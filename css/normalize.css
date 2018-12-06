@@ -435,7 +435,7 @@ a {
 	font-weight: 550;
 	}
 a:hover { 
-	color:#f5546f;
+	/* color:#f5546f; */
 	text-decoration:none; }
 sup { vertical-align:text-top; }
 sub{ vertical-align:text-bottom; }
