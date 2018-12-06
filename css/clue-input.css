@@ -8,4 +8,7 @@
     margin:0 auto;
     background-color: #f8f8f8;
     border-bottom:1px solid #eee;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
 }

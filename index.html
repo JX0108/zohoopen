@@ -31,19 +31,43 @@
                 </dd>
             </dl>
         </li>
-        <li class="nav-list"><a href="#">主页</a></li>
-        <li class="nav-list"><a href="#">线索</a></li>
-        <li><a href="#">联系人</a></li>
-        <li class="nav-list"><a href="#">客户</a></li>
-        <li><a href="#">交易</a></li>
-        <li><a href="#">任务，通话及活动</a></li>
-        <li><a href="#">报表</a></li>
-        <li><a href="#">数据分析</a></li>
-        <li><a href="#">产品</a></li>
-        <li><a href="#">报价</a></li>
-        <li> <a href="#">销售订单</a></p>
+        <li class="nav-list">
+            <a href="#">主页</a>
         </li>
-        <li><a href="#">动态</a></li>
+        <li class="nav-list">
+            <a href="#">线索</a>
+        </li>
+        <li>
+            <a href="#">联系人</a>
+        </li>
+        <li class="nav-list">
+            <a href="#">客户</a>
+        </li>
+        <li>
+            <a href="#">交易</a>
+        </li>
+        <li>
+            <a href="#">任务，通话及活动</a>
+        </li>
+        <li>
+            <a href="#">报表</a>
+        </li>
+        <li>
+            <a href="#">数据分析</a>
+        </li>
+        <li>
+            <a href="#">产品</a>
+        </li>
+        <li>
+            <a href="#">报价</a>
+        </li>
+        <li>
+            <a href="#">销售订单</a>
+            </p>
+        </li>
+        <li>
+            <a href="#">动态</a>
+        </li>
         <li class="tab_mode">
             <p class="dian">...</p>
             <!-- 模块下拉菜单 -->
@@ -54,25 +78,53 @@
                     <input type="text" id="mode_input" placeholder="Serch Modules">
                 </dd>
                 <dd>
-                    <p><a href="#">采购订单</a></p>
-                    <p><a href="#">发货单</a></p>
-                    <p><a href="#">SalesInbox</a></p>
-                    <p><a href="#">动态</a></p>
-                    <p><a href="#">市场活动</a></p>
-                    <p><a href="#">供货表</a></p>
-                    <p><a href="#">价格表</a></p>
-                    <p><a href="#">服务支持</a></p>
-                    <p><a href="#">解决方案</a></p>
-                    <p><a href="#">文档</a></p>
-                    <p><a href="#">预测</a></p>
+                    <p>
+                        <a href="#">采购订单</a>
+                    </p>
+                    <p>
+                        <a href="#">发货单</a>
+                    </p>
+                    <p>
+                        <a href="#">SalesInbox</a>
+                    </p>
+                    <p>
+                        <a href="#">动态</a>
+                    </p>
+                    <p>
+                        <a href="#">市场活动</a>
+                    </p>
+                    <p>
+                        <a href="#">供货表</a>
+                    </p>
+                    <p>
+                        <a href="#">价格表</a>
+                    </p>
+                    <p>
+                        <a href="#">服务支持</a>
+                    </p>
+                    <p>
+                        <a href="#">解决方案</a>
+                    </p>
+                    <p>
+                        <a href="#">文档</a>
+                    </p>
+                    <p>
+                        <a href="#">预测</a>
+                    </p>
                 </dd>
                 <dd>
-                    <p><a class="bluea" href="#">+ 创建新模块</a></p>
+                    <p>
+                        <a class="bluea" href="#">+ 创建新模块</a>
+                    </p>
                 </dd>
                 <dd>
                     <p>建议的应用程序</p>
-                    <p><a href="#">Zoho Desk</a></p>
-                    <p><a href="#">Zoho Projects</a></p>
+                    <p>
+                        <a href="#">Zoho Desk</a>
+                    </p>
+                    <p>
+                        <a href="#">Zoho Projects</a>
+                    </p>
                 </dd>
             </dl>
         </li>
@@ -82,7 +134,9 @@
     <ul class="nav_right">
         <li>
             <p style="font-size: 13px;">使用-旗舰版</p>
-            <p><a href="#" class="bluea" style="font-size: 13px;">升级</a></p>
+            <p>
+                <a href="#" class="bluea" style="font-size: 13px;">升级</a>
+            </p>
         </li>
         <li>
             <span></span>
@@ -149,7 +203,7 @@
     </ul>
 </nav>
 <div class="iframindex">
-    <iframe src="paging/zhuye.html" frameborder="0" id="iframe1"></iframe>
+    <iframe src="paging/zhuye.html" frameborder="0" id="iframe1" width="100%" height="100%"></iframe>
 </div>
 
 <body>
@@ -170,7 +224,7 @@
                 nav_list[i].style.backgroundColor = "#313948";
                 if (this == nav_list[i]) {
                     this.style.backgroundColor = "#5a616d";
-                    ifr1.src = "paging/" + ifrArr[i] + ".html";
+                    ifr1.src = ifrArr[i] + ".html";
                 }
             };
         }
