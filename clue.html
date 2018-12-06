@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>线索</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/clue.css">
+</head>
+
+<body>
+    <!-- <div style="width:100%;height:52px;background-color: red;"></div>  -->
+    <div id="warp">
+        <div class="clue_top">
+            <div class="close">
+                <div class="close1">所有未关闭的线索
+                    <i></i>
+                </div>
+                <div class="close2">编辑
+                    <i></i>
+                </div>
+            </div>
+            <div class="add">
+                <div class="toggler">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+                <div class="daoru">
+                    <a href="clue-input.html">
+                        <button class="btn1" type="submit"></button>
+                        <button class="btn2">导入</button>
+                    </a>
+
+                </div>
+
+                <div class="caozuo">...</div>
+            </div>
+        </div>
+        <div class="clue_btm">
+            <!-- 左边 -->
+            <div id="clue_left">
+                <!-- 搜索栏 -->
+                <div class="search">
+                    <div class="search1">
+                        <span>过滤线索通过</span>
+                        <i></i>
+                    </div>
+                    <div class="search2">
+                        <i></i>
+                        <input type="text" placeholder="搜索">
+                    </div>
+                </div>
+                <!-- 线索记录 -->
+                <div>
+                    <div class="clue_out">
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右边 -->
+            <div id="clue_right">
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/artTemplate.js/3.0.1/template.js"></script>
+<script>
+    $(function () {
+        $(".clue_top .close").on("mouseover", function () {
+            $(".clue_top .close .close2").show();
+            $(".clue_top .close .close1").css({ "border": "1px solid rgba(0,0,0,0.3)" });
+        });
+        $(".clue_top .close").on("mouseout", function () {
+            $(".clue_top .close .close2").hide();
+            $(".clue_top .close .close1").css({ "border-color": "#f8f8f8" });
+        });
+        $(".clue_top .add .toggler a:eq(0)").on("click", function () {
+            $(this).css({ "background-position": "-44px -100px" });
+            $(".clue_top .add .toggler a:eq(2)").css({ "background-position": "-229px -2313px" });
+        });
+        $(".clue_top .add .toggler a:eq(2)").on("click", function () {
+            $(this).css({ "background-position": "-234px -2417px" });
+            $(".clue_top .add .toggler a:eq(0)").css({ "background-position": "-3px -100px" });
+        });
+        $("#clue_left .search1").on("click", function () {
+            $(this).css({ "display": "none" });
+            $("#clue_left .search2").css({ "display": "block", "border-bottom": "1px solid #208aed" });
+            $("#clue_left .search2 input").focus();
+        });
+        $("#clue_left .search2 input").on("blur", function () {
+            $("#clue_left .search2").css({ "border-bottom": "1px solid #eee" });
+        });
+        $("#clue_left .search2 input").on("focus", function () {
+            $("#clue_left .search2").css({ "border-bottom": "1px solid #208aed" });
+        });
+    });
+</script>
