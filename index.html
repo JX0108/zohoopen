@@ -12,13 +12,13 @@
 <nav class="head_nav">
     <ul class="nav_left" id="nav_left">
         <li class="tab_group">
-            <p>
-                <span class="icon-bar"></span>
+            <p class="nav_show">
+                <span class=" icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </p>
             <!-- 页签组 -->
-            <dl class="group-list shadow">
+            <dl class="group-list shadow nav_hide">
                 <dd>页签组
                     <span class="lyte-drop-box">
 
@@ -69,9 +69,9 @@
             <a href="#">动态</a>
         </li>
         <li class="tab_mode">
-            <p class="dian">...</p>
+            <p class="nav_show dian">...</p>
             <!-- 模块下拉菜单 -->
-            <dl class="mode_list shadow">
+            <dl class="mode_list shadow nav_hide">
                 <dd>
                     <span></span>
                     <label for="mode_input" class="jlt"></label>
@@ -143,62 +143,78 @@
         </li>
         <li>
             <i class="jlt"></i>
-            <i class="jlt"></i>
+        </li>
+        <li>
+            <div class="nav_show">
+                <i class="jlt"></i>
+            </div>
             <!-- 添加 -->
-            <!-- <dl class="add_list shadow">
-                <dd><a href="#"><span>+</span>线索</a></dd>
-                <dd><a href="#"><span>+</span>联系人</a></dd>
-                <dd><a href="#"><span>+</span>客户</a></dd>
-                <dd><a href="#"><span>+</span>交易</a></dd>
-                <dd><a href="#"><span>+</span>产品</a></dd>
-                <dd><a href="#"><span>+</span>报价</a></dd>
-                <dd><a href="#"><span>+</span>销售订单</a></dd>
-                <dd><a href="#"><span>+</span>采购订单</a></dd>
-                <dd><a href="#"><span>+</span>发货单</a></dd>
-                <dd><a href="#"><span>+</span>市场活动</a></dd>
-                <dd><a href="#"><span>+</span>供货商</a></dd>
-                <dd><a href="#"><span>+</span>价格表</a></dd>
-                <dd><a href="#"><span>+</span>服务支持</a></dd>
-                <dd><a href="#"><span>+</span>解决方案</a></dd>
-                <dd><a href="#"><span>+</span>任务</a></dd>
-                <dd><a href="#"><span>+</span>活动</a></dd>
-                <dd><a href="#"><span>+</span>通话</a></dd>
-            </dl> -->
-        </li>
-        <li>
-            <span class="jlt"></span>
-        </li>
-        <li>
-            <span class="jlt"></span>
-        </li>
-        <li>
-            <img src="http://img.duoziwang.com/2017/08/172387283773.jpg" alt="">
-            <!-- 个人信息 -->
-            <!-- <dl class="nav_user shadow">
-                <dd>
-                    <p><a href="#" class="bluea">第一小组</a></p>
-                    <p>User ID:37898124</p>
-                    <p><a href="#" class="bluea">我的账号</a></p>
-                </dd>
-                <dd>
-                    <p>订购</p>
-                    <p>旗舰版使用版在15天后过期</p>
-                    <p>评估其他版本</p>
-                </dd>
-                <dd>
-                    <p>需要帮助吗</p>
-                    <p>400-660-8680</p>
-                    <p>support@zphpcorp.com.cn</p>
-                    <p>资源</p>
-                </dd>
-                <dd>
-                    <p>退出</p>
-                </dd>
-                <dd>
-                    <p>可用于<span></span><span></span></p>
-                </dd>
+            <div class="add_box nav_hide">
+                <span class="jt"></span>
+                <dl class="add_list shadow ">
 
-            </dl> -->
+                    <dd><a href="#"><span>+</span>线索</a> </dd>
+                    <dd><a href="#"><span>+</span>联系人</a></dd>
+                    <dd><a href="#"><span>+</span>客户</a></dd>
+                    <dd><a href="#"><span>+</span>交易</a></dd>
+                    <dd><a href="#"><span>+</span>产品</a></dd>
+                    <dd><a href="#"><span>+</span>报价</a></dd>
+                    <dd><a href="#"><span>+</span>销售订单</a></dd>
+                    <dd><a href="#"><span>+</span>采购订单</a></dd>
+                    <dd><a href="#"><span>+</span>发货单</a></dd>
+                    <dd><a href="#"><span>+</span>市场活动</a></dd>
+                    <dd><a href="#"><span>+</span>供货商</a></dd>
+                    <dd><a href="#"><span>+</span>价格表</a></dd>
+                    <dd><a href="#"><span>+</span>服务支持</a></dd>
+                    <dd><a href="#"><span>+</span>解决方案</a></dd>
+                    <dd><a href="#"><span>+</span>任务</a></dd>
+                    <dd><a href="#"><span>+</span>活动</a></dd>
+                    <dd><a href="#"><span>+</span>通话</a></dd>
+                </dl>
+            </div>
+
+        </li>
+        <li>
+            <span class="jlt"></span>
+        </li>
+        <li>
+            <span class="jlt"></span>
+        </li>
+        <li>
+            <div class="nav_show">
+                <img src="images/tx.jpg" alt="">
+            </div>
+
+            <!-- 个人信息 -->
+            <div class="user_box nav_hide">
+                <dl class="nav_user shadow ">
+                    <span class="jt"></span>
+                    <dd>
+                        <p><a href="#" class="bluea" style="font-size:15px">第一小组</a></p>
+                        <p>User ID:37898124</p>
+                        <p><a href="#" class="bluea" style="font-size:15px">我的账号</a></p>
+                    </dd>
+                    <dd>
+                        <p style="font-size:12px">订购</p>
+                        <p>旗舰版使用版在15天后过期</p>
+                        <p class="fffhover">评估其他版本</p>
+                    </dd>
+                    <dd>
+                        <p style="font-size:12px">需要帮助吗</p>
+                        <p style="font-size:14px">400-660-8680</p>
+                        <p style="font-size:14px">support@zphpcorp.com.cn</p>
+                        <p class="fffhover">资源</p>
+                    </dd>
+                    <dd>
+                        <p class="fffhover">退出</p>
+                    </dd>
+                    <dd>
+                        <p style="font-size:12px">可用于<span></span><span></span></p>
+                    </dd>
+
+                </dl>
+            </div>
+
         </li>
     </ul>
 </nav>
@@ -213,16 +229,18 @@
 </html>
 <script typet="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 <script>
+    // 给iframe添加自适应高度
     $("#iframe1").load(function () {
         var mainheight = $(this).contents().find("body").height() + 30;
         $(this).height(mainheight);
     });
-
     // 用一个数组保存分页的html名称
     var ifrArr = ['zhuye', 'clue', 'client'];
+    // 获取iframe
     var ifr1 = document.getElementById('iframe1');
     var nav_left = document.getElementById('nav_left');
     var nav_list = nav_left.getElementsByClassName("nav-list");
+    // 添加切换
     for (var i = 0; i < nav_list.length; i++) {
         nav_list[i].onclick = function () {
             for (var i = 0; i < nav_list.length; i++) {
@@ -234,4 +252,13 @@
             };
         }
     };
+    // 给导航栏的隐藏div添加
+    $(".nav_show").on('click', function (e) {
+        $('.nav_hide').hide();
+        $(this).next().toggle();
+        $(document).one('click', function () {
+            $('.nav_hide').hide();
+        });
+        e.stopPropagation();
+    });
 </script>

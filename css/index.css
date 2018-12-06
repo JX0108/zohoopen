@@ -35,6 +35,7 @@
     height: 1px ;
     background-color: rgb(238, 238, 238);
     border-radius: 1px;
+    cursor: pointer;
 }
 .head_nav .nav_left .tab_mode{
     position: relative;
@@ -45,6 +46,7 @@
     letter-spacing: 1px;
     line-height: 33px;
     color: rgb(238, 238, 238);
+    cursor: pointer;
 }
 /* 页签组 */
 .head_nav .nav_left .tab_group .group-list{
@@ -191,6 +193,7 @@ display: none;
 .head_nav .nav_right > li{
     height: 20px;
     margin-left: -5px;
+    cursor: pointer;
 }
 .head_nav .nav_right > li:nth-of-type(1){
     color: #ccc;
@@ -198,39 +201,120 @@ display: none;
     text-align: right;
     height: 33px;
 }
-.head_nav .nav_right > li:nth-of-type(2){
+.head_nav .nav_right > li:nth-of-type(2) span{
+    display: inline-block;
     height: 25px;
     border-right: 2px solid #5f646e;
-   margin-left: -10px;
 }
-.head_nav .nav_right > li:nth-of-type(3){
-    height: 19px;
-}
+
 .head_nav .nav_right > li:nth-of-type(3) i:nth-of-type(1){
     background-position: -147px -66px;
     width: 18px;
     height: 18px;
+    margin-right: -13px;
 }
-.head_nav .nav_right > li:nth-of-type(3) i:nth-of-type(2){
+.head_nav .nav_right > li:nth-of-type(4){
+    height: 19px;
+    position: relative;
+}
+.head_nav .nav_right > li:nth-of-type(4) i:nth-of-type(1){
     background-position: -180px -66px;
     width: 18px;
     height: 18px;
 }
-.head_nav .nav_right > li:nth-of-type(4) span{
+.head_nav .nav_right > li:nth-of-type(5) span{
     background-position: -244px -66px;
     width: 18px;
     height: 20px;
 }
-.head_nav .nav_right > li:nth-of-type(5) span{
+.head_nav .nav_right > li:nth-of-type(6) span{
     background-position: -275px -67px;
     width: 22px;
     height: 20px;
 }
-.head_nav .nav_right > li:nth-of-type(6){
+.head_nav .nav_right > li:nth-of-type(7){
     height: 33px;
+    position: relative;
 }
-.head_nav .nav_right > li:nth-of-type(6) img{
+.head_nav .nav_right > li:nth-of-type(7) img{
     height: 33px;
     width: 33px;
     border-radius: 50%;
+    cursor: pointer;
+}
+/* 添加栏 */
+.head_nav .nav_right  li .add_box{
+    display: none;
+}
+.head_nav .nav_right  li .add_list{
+    background-color: white;
+    width: 110px;
+    height: 330px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 28px;
+    left: 13px;
+}
+.head_nav .nav_right  li  .jt{
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 17px;
+    background: #fff;
+    transform: rotate(45deg);
+    box-shadow: -1px -1px 0 0 #d6d6d6;
+    box-shadow: rgb(214, 214, 214) -1px -1px 0px 0px;
+    top: 23px;
+    left: 16px;
+}
+.head_nav .nav_right  li .add_list dd{
+    height: 28px;
+    line-height: 28px;
+    padding-left: 15px;
+}
+.head_nav .nav_right  li .add_list dd a{
+    font-size: 13px;
+}
+.head_nav .nav_right  li .add_list dd a span{
+    padding-right: 10px;
+}
+.head_nav .nav_right  li .add_list dd:hover{
+    background-color: #f5f5f5;
+}
+.fffhover:hover{
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+/* 个人信息栏 */
+.head_nav .nav_right .user_box{
+    position: absolute;
+    width: 295px;
+    background-color: white;
+    left: -238px;
+    top: 42px;
+    display: none;
+}
+.head_nav .nav_right .user_box .jt{
+    top: -4px;
+    left: 261px;
+    width: 13px;
+    height: 13px;
+}
+.head_nav .nav_right .nav_user{
+    height: 350px;
+    overflow-y: scroll;
+}
+.head_nav .nav_right .nav_user dd{
+   padding-left: 30px;
+   font-size: 15px;
+   border-bottom: 1px solid #ececec;
+   padding: 10px 0 10px 0;
+   line-height: 33px;
+}
+.head_nav .nav_right .nav_user dd p{
+    padding-left: 30px;
+}
+.head_nav .nav_right .nav_user dd:nth-last-of-type(1){
+    background-color: #f5f5f5;
+    padding: 6px 0 6px 0px; 
 }
