@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建线索</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/clue-input.css">
+
+</head>
+<body>
+    <div id="warp">
+        <form action="clue-save.php" method="post">
+            <div class="clue_top">
+                <div></div>
+                <div class="btn">
+                    <input type="button" type="submit" value="保存">
+                    <input type="button" type="submit" value="保存并新建">
+                    <input type="button" type="submit" value="取消">
+                </div>
+            </div>
+        </form>
+        
+    </div>
+        
+</body>
+</html>
