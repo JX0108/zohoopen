@@ -31,3 +31,14 @@
 </body>
 
 </html>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function () {
+        var offset = $(".clue_top").offset();
+        var offsetTop = offset.top;
+        var scrollT = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollT >= offsetTop) {
+            $(".clue_top").css({ "position": "fixed", "top": "0px", "left": "0px", "width": "100%", "z-index": "10", "box-shadow": "rgb(229, 229, 229) 0px 1px 3px;" })
+        }
+    })
+</script>
