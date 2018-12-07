@@ -1,4 +1,4 @@
-#warp{
+#warp,#form{
     width:100%;
     height:100%;
 }
@@ -9,9 +9,11 @@
     background-color: #f8f8f8;
     border-bottom:1px solid #eee;
 }
-.clue_top .set_m{
-    width:1440px;
-    overflow: hidden;
+@media screen and (max-width:1440px) and (min-width:500px){
+    .clue_top .set_m{
+        width:100%;
+        overflow: hidden;
+    }
 }
 .clue_top .title{
     float: left;
@@ -44,10 +46,14 @@
     border: solid 1px #42a2eb!important;
     box-shadow: none!important;
 }
+@media screen and (max-width:1440px) and (min-width:500px){
+    .container{
+        width: 100%;
+        background-color: #fff;
+    }
+}
 .container{
-    padding: 30px;
-    max-width: 1440px;
-    background-color: #fff;
+    margin:30px;
 }
 .container .photo{
     margin-left: 30px;
@@ -103,9 +109,8 @@
 }
 .container .clueDiv .clue_content{
     margin-top: 0!important;
-    min-width: 900px;
     margin-bottom: 40px;
-    background-color: #fff;
+     background-color: #fff;
 }
 .container .clueDiv .clue_content>.float_left{
     float: left;
@@ -127,6 +132,14 @@
     float:left;
     color: #222;
     padding-top:19px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+.container .floatrow .left_row .cons .select{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 99;
 }
 .container .floatrow .left_row .cons input{
     width:100%;
@@ -143,4 +156,14 @@
 .clear{
     clear: both;
 }
-
+.container .address{
+    margin-top: 80px;
+}
+.describe .floatrow div.miaorow{
+    width:1380px;
+    height:95px;
+}
+.miaorow>div.miaoshu2{
+    width:1380px;
+    height: 48px;
+}

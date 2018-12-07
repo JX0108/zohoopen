@@ -133,15 +133,16 @@
 .clue_btm{
     width:100%;
     height:100%;
-    overflow: hidden;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
 }
 #clue_left{
     width: 250px;
     z-index: 10;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #fff;
     border-right: 1px solid rgb(233, 233, 233);
-    float: left;
 }
 #clue_left .search{
     width:249px;
@@ -204,11 +205,19 @@
 
 
 
-
-
-
+@media screen and (max-width:1669px){
+    #clue_right{
+        width:1669px;
+    }
+}
 #clue_right{
-    float: left;
+    width:100%;
+}
+#clue_right .conSet{
+    padding: 6px 25px;
+    /* position: relative; */
+    margin: 0!important;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 
