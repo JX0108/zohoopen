@@ -13,7 +13,7 @@
     <ul class="nav_left" id="nav_left">
         <li class="tab_group">
             <p class="nav_show">
-                <span class=" icon-bar"></span>
+                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </p>
@@ -46,7 +46,7 @@
         <li>
             <a href="#">交易</a>
         </li>
-        <li>
+        <li class="nav-list">
             <a href="#">任务，通话及活动</a>
         </li>
         <li>
@@ -132,18 +132,29 @@
     <div></div>
     <!-- 导航栏右侧 -->
     <ul class="nav_right">
+        <!-- 搜索 -->
         <li>
-            <p style="font-size: 13px;">使用-旗舰版</p>
-            <p>
-                <a href="#" class="bluea" style="font-size: 13px;">升级</a>
-            </p>
+            <div class="serch_hide">
+                <p>
+                    <label for="serch" class="jlt"></label>
+                    <input type="text" id="serch" placeholder="搜索">
+                    <i class="jlt" id="dom_show"></i>
+                </p>
+            </div>
+            <div class="dom_hide">
+                <div class="lex">
+                    <div class="p_kusr">
+                        <p style="font-size: 13px;">使用-旗舰版</p>
+                        <p>
+                            <a href="#" class="bluea" style="font-size: 13px;">升级</a>
+                        </p>
+                    </div>
+                    <span></span>
+                    <i class="jlt" class="serch_show" id="serch_show"></i>
+                </div>
+            </div>
         </li>
-        <li>
-            <span></span>
-        </li>
-        <li>
-            <i class="jlt"></i>
-        </li>
+
         <li>
             <div class="nav_show">
                 <i class="jlt"></i>
@@ -218,6 +229,12 @@
         </li>
     </ul>
 </nav>
+
+
+
+
+
+
 <div class="iframindex">
     <iframe src="zhuye.html" frameborder="0" id="iframe1" width="100%" height="100%"></iframe>
 </div>
@@ -235,7 +252,7 @@
         $(this).height(mainheight);
     });
     // 用一个数组保存分页的html名称
-    var ifrArr = ['zhuye', 'clue', 'client'];
+    var ifrArr = ['zhuye', 'clue', 'client', "task"];
     // 获取iframe
     var ifr1 = document.getElementById('iframe1');
     var nav_left = document.getElementById('nav_left');
@@ -254,11 +271,20 @@
     };
     // 给导航栏的隐藏div添加
     $(".nav_show").on('click', function (e) {
-        $('.nav_hide').hide();
+
         $(this).next().toggle();
         $(document).one('click', function () {
             $('.nav_hide').hide();
         });
         e.stopPropagation();
     });
+    // 搜索的隐藏和显示
+    $("#serch_show").on("click", function () {
+        $(".dom_hide").hide()
+        $(".serch_hide").show();
+    })
+    $("#dom_show").on("click", function () {
+        $(".serch_hide").hide()
+        $(".dom_hide").show();
+    })
 </script>
