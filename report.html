@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/report.css">
+</head>
+<!-- 侧边栏 -->
+<div class="report_aside">
+    <aside>
+        <div>
+            <p><span style="color: #666;">文件夹</span> <span class="bluea" id="bj">编辑</span></p>
+            <div class="serch_div">
+                <label for="serch_file" class="jlt"></label>
+                <input type="text" id="serch_file" placeholder="搜索文件夹">
+            </div>
+        </div>
+        <ul class="form_list" id="form_list">
+            <li class="list_lis">全部报表<i></i></li>
+
+            <!-- <li class="list_ipt">
+                <p>
+                    <label for="check1"><input type="checkbox" value="123" name="name" checked="true">全部报表</label>
+                    <i class="jlt"></i>
+                </p>
+            </li>
+            <li class="list_ipt">
+                <p>
+                    <label for="check1"><input type="checkbox" value="123" name="name" checked="true">全部报表</label>
+                    <i class="jlt"></i>
+                </p>
+            </li> -->
+        </ul>
+        <div class="de">
+            <p><i class="jlt"></i>最近删除的</p>
+        </div>
+    </aside>
+
+
+    <!-- 右侧 -->
+    <div class="con">
+        <!-- 标题 -->
+        <div class="con_title">
+            <div class="cont_left">
+                <span>销售订单报表</span>
+                <div>
+                    <label for="serch_from" class="jlt"></label> <input type="text" placeholder="销售订单报表" id="serch_from">
+                </div>
+            </div>
+            <!-- 报表头部 右侧 -->
+            <div class="cont_right">
+                <div>创建报表</div>
+                <div>
+                    <p>高级CRM数据分析</p>
+                    <p>由Zpoho Reports提供支持</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 操作 -->
+        <div class="operate">
+            <p>删除</p>
+            <p>移动到文件夹 <i class="jlt"></i></p>
+            <!-- <dl>
+                <dd>全部文件夹</dd>
+                <dd>销售订单报表</dd>
+            </dl> -->
+        </div>
+        <!-- 报表 -->
+        <table>
+            <thead>
+                <tr>
+                    <th> <label><input type="checkbox" value="123" name="name" checked="true"><span>报表名称</span></label></th>
+                    <th>
+                        描述
+                    </th>
+                    <th>
+                        上次运行日期<i></i>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox" value="销售订单-状态" name="name" checked="true">
+                            <i class="jlt"></i><span>销售订单-状态</span>
+                        </label></td>
+                    <td>不同状态的销售订单</td>
+                    <td>上一次运行的时间</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox" value="销售订单-状态" name="name" checked="true">
+                            <i class="jlt"></i><span>销售订单-状态</span>
+                        </label></td>
+                    <td>不同状态的销售订单</td>
+                    <td>上一次运行的时间</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+
+</html>
+<script type="text/html" id="aside1">
+    {{each data}}
+    {{if $value.status ==1}}
+    <li class="list_lis" data-url="{{$value.parameter}}">{{$value.name}}<i></i></li>
+    {{/if}}
+    {{/each}}
+</script>
+<script type="text/html" id="aside2">
+    {{each data}}
+    {{if $value.status ==1}}
+             <li class="list_ipt">
+                <p>
+                    <label><input class="check_box" type="checkbox" value="{{$value.parameter}}" checked="true" data-id="{{$value.id}}">{{$value.name}}</label>
+                    <i class="jlt"></i>
+                </p>
+            </li>
+            {{else}}
+            <li class="list_ipt">
+                    <p>
+                        <label><input class="check_box" type="checkbox" value="{{$value.parameter}}" data-id="{{$value.id}}">{{$value.name}}</label>
+                        <i class="jlt"></i>
+                    </p>
+            </li>
+    {{/if}}
+    {{/each}}
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="http://cdn.staticfile.org/artTemplate.js/3.0.1/template.js"></script>
+<script>
+    var bjon = true;
+    $.ajax({
+        url: "php/report.php",
+        type: "post",
+        data: {
+            "action": "report"
+        },
+        dataType: "json",
+        success: function (data, textStatus) {
+            console.log(data)
+            var html = template("aside1", data);
+            $("#form_list").html(html);
+        }
+    })
+    $("#bj").on("click", function () {
+        $.ajax({
+            url: "php/report.php",
+            type: "post",
+            data: {
+                "action": "report"
+            },
+            dataType: "json",
+            success: function (data, textStatus) {
+                console.log(data)
+                if (bjon) {
+                    var html = template("aside2", data);
+                    $("#form_list").html(html);
+                    $("#bj").html("完成");
+                    bjon = false;
+                    $(".de").hide();
+                    $(".check_box").change(function () {
+                        var check = $(this).is(":checked");
+                        if (check == true) {
+                            $.ajax({
+                                url: "php/reportstatus.php",
+                                type: "post",
+                                data: {
+                                    "reid": $(this).data("id")
+                                },
+                                dataType: "json",
+                                success: function (data, textStatus) {
+                                    console.log(data)
+                                }
+                            })
+                        } else {
+                            $.ajax({
+                                url: "php/reportstatus.php",
+                                type: "post",
+                                data: {
+                                    "action": "upload",
+                                    "reid": $(this).data("id")
+                                },
+                                dataType: "json",
+                                success: function (data, textStatus) {
+                                    console.log(data)
+                                }
+                            })
+                        }
+                    });
+                } else {
+                    var html = template("aside1", data);
+                    $("#form_list").html(html);
+                    $("#bj").html("编辑");
+                    bjon = true;
+                    $(".de").show();
+
+                }
+
+            }
+        })
+    })
+</script>

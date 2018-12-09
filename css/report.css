@@ -1,0 +1,260 @@
+
+.report_aside{
+    display: flex;
+    height:100%; 
+    position:absolute; 
+    width:100%; 
+    left:0; 
+    top:0;
+   /* justify-content: space-between; */
+}
+.report_aside aside{
+    width: 219px;
+   height: 100%;
+    background-color:#f1f1f1;
+    border-right:1px solid #cccccc;
+    font-size: 16px;
+    overflow-y:scroll;
+    position: relative;
+   margin-bottom: 42px;
+}
+/* * 精灵图 */ 
+.jlt{
+    display: inline-block;
+    background:transparent url(../image/jlt.png) no-repeat;
+}
+.report_aside aside div:nth-of-type(1){
+    width: 216px;
+}
+.report_aside aside div:nth-of-type(1) > p{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 10px;
+   color: #000;
+   width: 100%;
+   height: 31px;
+   padding-bottom: 3px;
+   top: 0;
+   background: #f1f1f1;
+    padding-top: 15px;
+    font-size: 12px;
+}
+.report_aside aside div:nth-of-type(1) > .serch_div{
+  background-color: white;
+  height: 24px;
+    border: 1px solid #e0e0e0;
+    margin-left: 0;
+    width: 100%;
+    font-size: 14px;
+}
+.report_aside aside div:nth-of-type(1) > .serch_div label{
+    background-position: 0 0;
+    width: 16px;
+    height: 16px;
+    margin-top:2px;
+    font-size: 18px;
+    margin-left: 5px;
+}
+/* 全部列表数据 */
+.report_aside aside .form_list{
+    margin-top: 20px;
+}
+/* 初始化样式 */
+.report_aside aside .form_list .list_lis{
+   padding: 5px 0 5px 0px;
+   display: flex;
+    justify-content: space-between;
+}
+.report_aside aside .form_list .list_lis i{
+    width: 14px;
+    height: 14px;
+    display: inline-block;  
+    margin-top: 6px;
+}
+
+.report_aside aside .form_list .list_lis:hover{
+    background-color:  #d4dbe1;
+}
+.report_aside aside .form_list .list_lis:hover i{
+    background:transparent url(../image/jlt.png) no-repeat;
+    background-position: -113px -394px;
+}
+.report_aside aside .de i{
+    background-position: -160px -246px;
+    width: 11px;
+    height: 13px;
+    margin-right: 8px;
+}
+.report_aside aside .de{
+    text-align: center;
+    width: 215px;
+    padding: 0 15px ;
+    border-top: 1px solid black;
+    height: 42px;
+    background-color: #f1f1f1;
+    line-height: 42px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.report_aside aside .de:hover{
+    background-color:  #d4dbe1;
+}
+/* 编辑样式 */
+.report_aside aside .list_ipt{
+
+}
+.report_aside aside{
+    padding: 0 15px;
+}
+.report_aside aside .form_list{
+   
+}
+.report_aside aside .list_ipt p{
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.report_aside aside .list_ipt p input{
+    margin-right: 10px;
+}
+.report_aside aside .list_ipt p i{
+    background-position: -63px -372px;
+    height: 8px;
+    width: 12px;
+    margin-top: 12px;
+}
+
+
+.con{
+width: 85%;
+height: 100%;
+overflow-y:scroll;
+/* background-color: pink; */
+padding: 0 20px;
+}
+.con .con_title{
+   margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.con .con_title .cont_left{
+    display: flex;
+}
+.con .con_title .cont_left span{
+    font-family: ProximaNovalight,sans-serif;
+    font-size: 22px;
+    color: #010000;
+    padding-right: 6px;
+    cursor: default;
+    line-height: 22px;
+}
+.con .con_title .cont_left > div label{
+    background-position: -127px -140px;
+    width: 24px;
+    height: 16px;
+    margin:3px 2px 0px 2px;
+}
+.con .con_title .cont_left > div{
+    border: 1px solid #c4bfbf;
+    background-color: #fff;
+    width: 188px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    margin-left: 20px;
+    border-radius: 7px;
+    padding: 0px 5px;
+}
+.con .con_title .cont_right{
+    display: flex;
+}
+.con .con_title .cont_right div:nth-of-type(1){
+    background-color: #19bc7d;
+   padding: 7px 19px;
+   font-size: 16px;
+    border: solid 1px #19bc7d;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+
+}
+.con .con_title .cont_right div:nth-of-type(2){
+    
+margin-left: 10px;
+}
+.con .con_title .cont_right div:nth-of-type(2) p:nth-of-type(1){
+    font-size: 15px;
+    color: #737373;
+}
+.con .con_title .cont_right div:nth-of-type(2) p:nth-of-type(2){
+    color: #aaa9af;
+}
+.con .operate{
+    margin-top: 25px;
+    display: flex;
+    opacity: .6;
+}
+.con .operate p:nth-of-type(1){
+    padding: 6px 8px;
+    font-family: ProximaNovaRegular,sans-serif;
+    font-size: 13px;
+    color: #333;
+    border: 1px solid #c7c7c7;
+    background-color: #f6f6f6;
+    height: auto;
+    cursor: pointer;
+}
+.con .operate p:nth-of-type(2){
+    background-color: weite;
+    color: #3c3c3c;
+    border: 1px solid #c7c7c7;
+    border-radius: 2px;
+    padding: 6px 10px;
+    font-size: 13px;
+    height: auto;
+    margin-right: 3px;
+    margin-left: 18px;
+    cursor: pointer;
+}
+.con .operate p:nth-of-type(2) i{
+    background-position: -265px -401px;
+    width: 11px;
+    height: 7px;
+}
+.con table{
+    margin-top: 10px;
+    table-layout: inherit; 
+    width: 100%; 
+    text-align: left;
+    border: 1px solid #eaeaea;
+}
+.con table thead tr{
+    background-color: #eaeaea;
+}
+.con table th{
+    margin: 0;
+    padding-left: 10px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 9px;
+}
+.con table th span{
+    padding-left: 30px;
+}
+.con table td{
+    padding:5px 0  5px 10px;
+    font-size: 15px;
+}
+.con table td:nth-of-type(1){
+    color: #2a80b9;
+}
+.con table td i{
+    line-height: 10px;
+    background-position: -197px -367px;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+    margin: 0px 6px 0 2px;
+}
