@@ -1,3 +1,7 @@
+body{
+    width: 100%;
+    height: 100%;
+}
 .head{
     height: 52px;
     width: 100%;
@@ -5,6 +9,17 @@
 }
 .center{
     width: 100%;
+    height: 100%;
+    position: fixed;
+}
+.center .center-cen{
+    width: 100%;
+    height: 100%;
+}
+.center .center-cen .center-right{
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 .center .title{
     height: 67px;
@@ -19,6 +34,9 @@
 .center .title .title_left{
     width: 510px;
 }
+.center .title .title_left:hover .all .all2{
+    border: 1px solid #ccc;
+}
 .center .title .title_left .all{
     
     margin-left: 15px;
@@ -30,12 +48,10 @@
     position: relative;
     width: 102px;
     height: 32px;
-    
+    border: 1px solid rgb(248,248,248);
     border-radius: 5px;
 }
-.center .title .title_left .all .all2:hover{
-    border: 1px solid #ccc;
-}
+
 .center .title .title_left .all .all2 a{
     line-height: 32px;
     /* text-align: center; */
@@ -81,9 +97,11 @@
     background: #fff;
     /* border: 1px solid #bbb; */
     margin-left: 15px;
-    margin-top: -10px;
+    margin-top: 0px;
     box-shadow: #d7d3e2 0px 3px 10px 3px;
     display: none;
+    z-index: 999;
+    position: absolute;
 }
 .center .title .title_left .all-client span{
     color: rgb(105, 104, 104);
@@ -107,7 +125,7 @@
     line-height: 35px;
 }
 .title_right{
-    width: 400px;
+    width: 305px;
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
@@ -177,6 +195,7 @@
     box-shadow: #d7d3e2 0px 3px 10px 3px;
     background: #fff;
     display: none;
+    z-index: 99;
 }
 .title_right .lead .lead-ul ul li{
     line-height: 30px;
@@ -207,6 +226,7 @@
     top: 55px;
     padding-top: 10px;
     display: none;
+    z-index: 9999;
 }
 .title_right .batch .more-rig .oUl li{
     height: 30px;
@@ -234,14 +254,20 @@
 .center-cen{
     display: flex;
     display: -webkit-flex;
+    
 }
 .center-cen .center-left{
-    width: 250px;
+    /* width: 100%; */
+    height: 100%;
     border-right: 1px solid #ccc;
+    position: absolute;
+    overflow: hidden;
+    z-index: 4;
 }
 .center-cen .center-left .search{
     height: 44px;
-
+    padding-left: 15px;
+    padding-right: 20px;
 }
 .center-cen .center-left .search .filtr{
     width: 214px;
@@ -250,8 +276,8 @@
     display: -webkit-flex;
     justify-content: space-between;
     margin: auto;
-    margin-top: 15px;
-    display: none;
+    margin-top: 25px;
+    /* display: none; */
 }
 .center-cen .center-left .search .filtr span{
     color: rgb(145, 151, 163);
@@ -270,6 +296,7 @@
     margin-top: 5px;
     border-bottom: 1px solid #ccc;
     position: relative;
+    z-index: -1;
 }
 .center-cen .center-left .searchs i{
     width: 16px;
@@ -288,7 +315,12 @@
 }
 .center-cen .center-left .screen{
     margin-top: 5px;
+    height: 100%;
     overflow: scroll;
+}
+.center-cen .center-left .screen ul{
+    overflow-y: scroll;
+    height: 100%;
 }
 .center-cen .center-left .screen ul li{
     /* height: 33px; */
@@ -297,7 +329,7 @@
 }
 .center-cen .center-left .screen ul li .down{
     width: 215px;
-    height: 63px;
+    /* height: 63px; */
     margin-left: 20px;
     margin-bottom: 10px;
     display: none;
@@ -309,4 +341,389 @@
     width: 200px;
     border-bottom: 1px solid #ccc;
     padding: 8px 8px 7px;
+}
+.center-cen .center-left .use{
+    width: 220px;
+    line-height: 34px;
+    padding: 2px 6px 50px 20px;
+    position: absolute;
+    bottom:65px;
+    background: #fff;
+    display: none;
+}
+.center-cen .center-left .use input{
+    width: 107px;
+    height: 33px;
+    background: rgb(66,162,235);
+    line-height: 33px;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+.center-cen .center-left .use a{
+    margin-left: 20px;
+}
+.center-cen .center-right .cs_show{
+    margin-left: 250px;
+    width: 10px;
+    height: 40px;
+    background: #b4b4b4;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    cursor: pointer;
+    z-index: 99;
+} 
+.center-cen .center-right .cs_show .cs_show2{
+    width: 4px;
+    height: 7px;
+    background: url(../images/1.png) -277px -597px;
+    display: inline-block;
+}
+.center-cen .center-right .cs_show .cs_show3{
+    width: 4px;
+    height: 7px;
+    background: url(../images/1.png) -287px -597px;
+    display: inline-block;
+}
+.center-cen .center-right .canvas_rig{
+    /* width: 100%; */
+    border-bottom: 1px solid #ccc;
+    margin-left: 251px;
+}
+.center-cen .center-right .canvas_rig .canvasview{
+    display: flex;
+    display: -webkit-flex;
+    width: 1669px;
+    height: 45px;
+    justify-content: space-between;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top{
+    height: 32px;
+    margin-top: 4px;
+    display: flex;
+    display: -webkit-flex;
+    margin-left: 50px;
+    line-height: 32px;
+    font-size: 15px;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top input{
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .sp_h{
+    margin-left: 15px;
+    color: #777;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc{
+    margin-left: 15px;
+    font-size: 13px;
+    position: relative;
+    width: 130px; 
+    border-radius: 3px;
+    border: 1px solid #fff; 
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc .acco{
+    width: 220px;
+    background: #fff;
+    box-shadow: #d7d3e2 0px 3px 10px 3px;
+    position: absolute;
+    left: 0px;
+    top: 32px;
+    display: none;
+    z-index: 99;
+}
+
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc .acco .sp{
+    font-size: 10px;
+    color: #ccc;
+    margin-left: 10px;
+    /* margin-top: 5px; */
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc .acco>div{
+    line-height: 30px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc .acco>div .sp1{
+    width: 12px;
+    height: 8px;
+    background: url(../images/1.png) -283px -34px;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc .acco>div .sp2{
+    margin-left: 30px;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc .acco ul li{
+    line-height: 30px;
+    padding-left: 20px;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc:hover{
+    border: 1px solid #ccc; 
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc .sps{
+    /* margin-top: -3px; */
+    margin-left: 15px;
+    display: inline-block;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top .canvas_Acc i{
+    width: 9px;
+    height: 5px;
+    display: inline-block;
+    background: url(../images/1.png) -36px -939px;
+}
+.center-cen .center-right .canvas_rig .canvasview .cv_top a{
+    margin-left: 15px;
+}
+.down .pass span{
+    font-size: 13px;
+}
+.down .pass select{
+    border: 1px solid #ccc;
+}
+.down .lately{
+    display: flex;
+    display: -webkit-flex;
+}
+.down .lately input{
+    width: 25px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+.down .lately .times{
+    margin-left: 5px;
+}
+.canvasview .tablescroll{
+    height: 25px;
+    display: flex;
+    display: -webkit-flex;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.canvasview .tablescroll .sort{
+    position: relative;
+    margin-right: 10px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+    line-height: 25px;
+}
+.canvasview .tablescroll .sort span{
+    font-size: 15px;
+}
+.canvasview .tablescroll .sort i{
+    width: 9px;
+    height: 5px;
+    display: inline-block;
+    background: url(../images/1.png) -36px -939px;
+    margin-left: 20px;
+}
+.canvasview .tablescroll .sort .sort_li{
+    width: 200px;
+    height: 243px;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    box-shadow: #d7d3e2 0px 3px 10px 3px; 
+    display: none;
+    z-index: 99;
+    background: #fff;
+}
+.canvasview .tablescroll .sort .sorts{
+    position: relative;
+    z-index: 11;
+}
+.canvasview .tablescroll .sort .sort_li .sort_search{
+    width: 198px;
+    /* height: 31px; */
+    border: 1px solid #ccc;
+    position: relative;
+}
+.canvasview .tablescroll .sort .sort_li .sort_search span{
+    width: 24px;
+    height: 26px;
+    background: url(../images/1.png) -306px -992px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.canvasview .tablescroll .sort .sort_li .sort_search input{
+    width: 165px;
+    height: 20px;
+    padding: 5px 5px 5px 28px;
+}
+.canvasview .tablescroll .sort .sort_li ul{
+    /* max-height: 200px; */
+    overflow-y: scroll;
+    height: 200px;
+    margin-top: 5px;
+    z-index: 99;
+}
+.canvasview .tablescroll .sort .sort_li ul li{
+    line-height: 32px;
+    height: 32px;
+    position: relative;
+    padding: 6px 25px;
+}
+.canvasview .tablescroll .sort .sort_li ul li:hover{
+    background: #ccc;
+}
+.canvasview .tablescroll .sort .sort_li ul li span{
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    margin-top: -5px;
+    background: url(../images/1.png) -283px -34px;
+    display: none;
+}
+.canvasview .tablescroll .sort .sort_li ul li span.active{
+    display: block;
+}
+.canvasview .tablescroll .adapt input{
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+}
+.canvasview .tablescroll .adapt span{
+    font-size: 15px;
+    margin-left: 5px;
+}
+.center-right .list{
+    /* width: 100%; */
+    height: 100%;
+    margin-left: 251px;
+    overflow: scroll;
+    position: absolute;
+}
+.center-right .list .cen_li{
+    margin-bottom: 59px;
+}
+.center-right .list li{
+    padding: 11px 25px 11px 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    z-index: 2;
+    width: 1627px;
+}
+.center-right .list  .cen_li li:hover{
+    background-color: rgb(241, 241, 241);
+}
+.center-right .list li:hover .amend{ 
+    display: block;
+}
+.center-right .list li .amend{
+    display: none;
+}
+.center-right .list li .amend span{
+    width: 13px;
+    height: 13px;
+    background: url(../images/1.png) -120px -246px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+.center-right .list li .checkbox_ch{
+    margin-left: 50px;
+    width: 15px;
+    height: 15px;
+}
+.center-right .list ul li img{
+    width: 104px;
+    height: 95px;
+    margin-left: 20px;
+    border: 1px solid #888;
+    opacity: .1;
+}
+.center-right .list ul li .img_bg{
+    margin-left: 20px;
+    width: 150px;
+}
+.center-right .list ul li .img_bg p{
+    font-size: 20px;
+}
+.center-right .list ul li .box_left{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    margin-left: 160px;
+    margin-top: 25px;
+}
+.center-right .list ul li .box_center{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    margin-left: 160px;
+    margin-top: 25px;
+    width: 150px;
+}
+.center-right .list ul li .box_right{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    margin-left: 160px;
+    margin-top: 25px;
+}
+.botm{
+    position: absolute;
+    left: 251px;
+    bottom: 67px;
+    height: 57px;
+    width: 1670px;
+    background: #fff;
+    z-index: 999;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+.botm .botm_li{
+    display: flex;
+    display: -webkit-flex;
+}
+.botm  span{
+    line-height: 57px;
+    margin-left: 30px;
+    font-size: 13px;
+}
+.botm .botm_li select{
+    height: 30px;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    font-size: 15px;
+}
+.botm .botm_li .botm_p{
+    margin-right: 25px;
+}
+.botm .botm_li .botm_p span{
+    font-size: 15px;
+    height: 30px;
+    display: inline;
+}
+.botm .botm_li .botm_p span .i1{
+    opacity: .6;
+    background: url(../images/1.png) -2px -127px;
+    width: 11px;
+    height: 21px;
+    display: inline-block;
+    margin-bottom: -5px;
+}
+.botm .botm_li .botm_p span .i2{
+    opacity: .6;
+    background: url(../images/1.png)-22px -127px;
+    width: 11px;
+    height: 21px;
+    display: inline-block;
+    margin-bottom: -5px;
 }
