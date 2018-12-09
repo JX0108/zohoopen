@@ -52,7 +52,7 @@
                                 <div class="labelDiv">
                                     <label for="name" class="label">名</label>
                                 </div>
-                                <div class="cons">
+                                <div class="cons cons1">
                                     <input type="text" name="name" id="name">
                                     <div class="select">
                                         <select name="chenghu" id="chenghu">
@@ -92,7 +92,8 @@
                                 <div class="labelDiv">
                                     <label for="source" class="label">线索来源</label>
                                 </div>
-                                <div class="cons">
+                                <div class="cons cons1">
+                                    <input type="hidden">
                                     <div class="select">
                                         <select name="source" id="source">
                                             <option value="0">-None-</option>
@@ -107,7 +108,8 @@
                                 <div class="labelDiv">
                                     <label for="industry" class="label">行业</label>
                                 </div>
-                                <div class="cons">
+                                <div class="cons cons1">
+                                    <input type="hidden">
                                     <div class="select">
                                         <select name="industry" id="industry">
                                             <option value="0">-None-</option>
@@ -164,7 +166,8 @@
                                 <div class="labelDiv">
                                     <label for="state" class="label">线索状态</label>
                                 </div>
-                                <div class="cons">
+                                <div class="cons cons1">
+                                    <input type="hidden">
                                     <div class="select">
                                         <select name="state" id="state">
                                             <option value="0">-None-</option>
@@ -187,7 +190,8 @@
                                 <div class="labelDiv">
                                     <label for="grade" class="label">等级</label>
                                 </div>
-                                <div class="cons">
+                                <div class="cons cons1">
+                                    <input type="hidden">
                                     <div class="select">
                                         <select name="grade" id="grade">
                                             <option value="0">-None-</option>
@@ -235,7 +239,7 @@
                                     <label for="country" class="label">国家/地区</label>
                                 </div>
                                 <div class="cons">
-                                    <input type="text" name="country" id="country">
+                                    <input type="text" name="country" id="country" class="inpt">
                                 </div>
                             </div>
                         </div>
@@ -303,35 +307,26 @@
         });
     });
 
-    $(".floatrow .left_row").each(function (index, element) {
-        $(this).on("click", function () {
-            $(this).children(".cons").css({ "border-bottom": "1px solid #208aed" });
-            $(this).not().eq(index).css({ "border-bottom": "1px solid #f0f0f0" });
+
+    $(".floatrow .left_row").on("click", function () {
+        $(this).children(".cons").css({ "border-bottom": "1px solid #208aed" }).children("input").focus();
+        $(this).children(".cons").children("input").on("blur", function () {
+            $(this).parent(".cons").css({ "border-bottom": "1px solid #f0f0f0" });
+
         });
-
-
+        $(this).children(".cons").children("input").on("focus", function () {
+            $(this).parent(".cons").css({ "border-bottom": "1px solid #208aed" });
+        });
+        // $(".cons1").css({ "border-bottom": "1px solid #f0f0f0" });
     });
-    // $(".floatrow .left_row").on("click", function () {
 
-
-
-
-    // $(this).children(".cons").css({ "border-bottom": "1px solid #208aed" }).children("input").focus();
-    // $(this).children(".cons").children("input").on("blur", function () {
-    //     $(this).parent(".cons").css({ "border-bottom": "1px solid #f0f0f0" });
-    // });
-    // $(this).children(".cons").children("input").on("focus", function () {
-    //     $(this).parent(".cons").css({ "border-bottom": "1px solid #208aed" });
-    // });
-
-    // });
 
     // $(".floatrow .left_row").on("click", function () {
-    //     $(this).children(".cons").css({ "border-bottom": "1px solid #208aed" }).children("input").focus();
-    //     $(this).children(".cons").children("input").on("blur", function () {
+    //     $(this).children(".cons").css({ "border-bottom": "1px solid #208aed" }).children("input:not(#name)").focus();
+    //     $(this).children(".cons").children("input:not(#name)").on("blur", function () {
     //         $(this).parent(".cons").css({ "border-bottom": "1px solid #f0f0f0" });
     //     });
-    //     $(this).children(".cons").children("input").on("focus", function () {
+    //     $(this).children(".cons").children("input:not(#name)").on("focus", function () {
     //         $(this).parent(".cons").css({ "border-bottom": "1px solid #208aed" });
     //     });
 

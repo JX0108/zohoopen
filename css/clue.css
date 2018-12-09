@@ -58,7 +58,7 @@
     display: flex;
     display: -webkit-flex;
     justify-content: space-between;
-    margin:20px;
+    margin:20px 20px 0;
 }
 .clue_top .add .toggler a{
     width: 15px;
@@ -193,6 +193,33 @@
 }
 
 
+#clue_left .clue_out ul li{
+    margin:15px 10px;
+    padding-left:5px;
+    list-style:none;
+}
+#clue_left .clue_out ul li>div{
+    height:0px;
+    /* height:100px; */
+    overflow:hidden;
+    transition:height 0.1s;
+}
+#clue_left .clue_out ul li>div select{
+    margin:10px 20px 5px 20px;
+    padding-left:20px;
+    outline: none;
+}
+#clue_left .clue_out ul li .ky_search_inp{
+    width:180px;
+    margin-left:20px;
+    border-bottom:1px solid #eee;
+    margin-top:20px;
+}
+#clue_left .clue_out ul li .ky_search_inp input{
+    border:none;
+    outline: none;
+}
+
 
 
 
@@ -213,13 +240,168 @@
 #clue_right{
     width:100%;
 }
-#clue_right .conSet{
-    padding: 6px 25px;
-    /* position: relative; */
-    margin: 0!important;
+#clue_right .clueContainer{
+    height:44px;
+    background-color:#fff;
+    border-bottom: 1px solid #e5e5e5;
+    margin:0 auto;
+}
+#clue_right .clueContainer .box_nav{
+    float:left;
+    background-color:#fff;
+    padding-left:40px;
+    width:300px;
+    line-height:44px;
+    height:44px;
+}
+#clue_right .clueContainer .box_nav>span{
+    display:inline-block;
+}
+#clue_right .clueContainer .box_nav .box_nav_input{
+    width:15px;
+    height:15px;
+}
+#clue_right .clueContainer .box_check{
+    float:right;
+    width:350px;
+    height:44px;
+}
+#clue_right .clueContainer .box_shitu{
+    font-size:15px;
+    margin-left:13px;
+    color: #777;
+}
+#clue_right .clueContainer .box_huabu{
+    cursor: pointer;
+    margin-left: 5px;
+    display:inline-block;
+    text-align:center;
+    margin-top: 1px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    width:118px;
+    height:30px;
+    line-height:30px;
+}
+#clue_right .clueContainer:hover .box_huabu{
+    border: 1px solid #666;
+}
+#clue_right .clueContainer .box_huabu>b{
+    width: 0;
+    height: 0;
+    display: inline-block;
+    /* float:right; */
+    margin-top: 14px;
+    margin-right: 13px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #777 transparent transparent transparent;
+}
+#clue_right .clueContainer .box_bianji_ser{
+    font-size:15px;
+    margin-left:20px;
+    color: #777;
+}
+.clueTable{
+    overflow: hidden;
+}
+.clueTableDiv{
+    border-bottom:1px solid #e5e5e5;
+    overflow: hidden;
+
+}
+.clueTableDiv .liCheck{
+    float: left;
+    margin: 17px 25px 11px 38px;
+    font-size: 16px;
+    border-bottom: 1px solid #eceff1;
+}
+.clueTableDiv .divImg{
+    float: left;
+    height: 82px;
+    line-height: 82px;
+    width: 87px;
+    border: 1px solid #e5e5e5;
+    margin: 10px 15px 15px 0;
+}
+.clueTableDiv .divImg img{
+    vertical-align: middle;
+}
+.clueTableDiv .listDiv{
+    float: left;
+    width: 53%;
+    margin-top:12px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+.clueTableDiv .listDiv>ul>li{
+    color: #222;  
+    line-height: 20px;
+}
+.clueTableDiv .listDiv ul:nth-child(1) .spanName{
+    font-size: 18px;
+}
+.clueTableDiv .listDiv ul:nth-child(1) .spanSurname{
+    font-size: 18px;
+}
+.clueTableDiv .listDiv ul:nth-child(1) .spanState{
+    color: #358424;
+    font-size: 16px;
+    line-height: 16px;
+}
+.clueTableDiv .listDiv ul:nth-child(1) span{
+    padding: 0 5px;
+}
+.clueTableDiv .listDiv ul:nth-child(1) span i{
+    font-style: normal;
+}
+.clueTableDiv .listDiv ul:nth-child(2) li{
+    line-height: 21px;
+}
+.clue_table{
+    display: none;
+}
+.clue-up{
+    height: 35px;
+}
+.ulDiv{
+    width: 100%;
+    /* border-bottom: 1px solid #e5e5e5; */
+    line-height: 35px;
+}
+.ulDiv ul{
+    width: 110%;
+}
+.ulDiv ul li{
+    display: inline-block;
+    width: 14.7%;
+    height: 35px;
+    font-size: 14px;
     border-bottom: 1px solid #e5e5e5;
 }
-
-
-
+.ulDiv ul li:nth-child(1){
+    width: 10%;
+    text-align: center;
+    color: #9d9d9d;
+}
+.ulDiv ul li.liEmail{
+    width: 14.6%;
+}
+.right-nav{
+    width: 100%;  
+    line-height: 42px;
+}
+.right-nav li{
+    display: inline-block;
+    color: #111;
+    cursor: pointer;
+    line-height: 42px;
+    letter-spacing: 1px;
+}
+.right-nav li.blue{
+    color: #2679d3;
+    cursor:poniter;
+    font-size: 14px;
+}
 

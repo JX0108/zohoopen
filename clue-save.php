@@ -19,7 +19,7 @@ $chenghu = empty($_REQUEST["chenghu"])?"null":$_REQUEST["chenghu"];
 
 $action = empty($_REQUEST["action"])?"add":$_REQUEST["action"];
 
-$sql = "insert into clue(线索所有者,姓,名,称呼,公司, 职位, 邮箱, 电话, 手机, 线索来源, 行业, 年收入, 网站, 线索状态, 员工数, 等级, 备用邮箱) value('$clueOwner','$surname','$name','$chenghu','$company','$position','$email','$telephone','$mobile','$source','$industry','$income','$website','$state','$staff','$grade','$spare')";
+$sql = "insert into clue(clueOwner,surname,name,chenghu,campany,position,email,telephone,mobile,source,industry,income,website,state,staff,grade,spare) value('$clueOwner','$surname','$name','$chenghu','$company','$position','$email','$telephone','$mobile','$source','$industry','$income','$website','$state','$staff','$grade','$spare')";
 
 include("conn.php");
 
