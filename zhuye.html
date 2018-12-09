@@ -11,15 +11,24 @@
 
 <body>
     <div class="boxs">
+        <div class="nav">
+            <p>欢迎 第一小组</p>
+            <div class="nav_right">
+                <i id="js"></i>
+                <div class="lie">第一小组的主页</div>
+                <div class="xunx">...</div>
+            </div>
+        </div>
         <div class="boxs_1">
             <div class="wei">
                 <div class="title">
                     <p>未关闭的任务</p>
+                    <i></i>
                 </div>
                 <div class="list">
 
                     <table id="xians">
-                        <tr>
+                        <tr id="show_tab_one">
                             <td>线索名称</td>
                             <td>公司</td>
                             <td>邮箱</td>
@@ -46,15 +55,13 @@
                     </table>
                 </div>
                 <div class="fenye">
-                    <i>
-                        <</i>1
-                            <span>到</span> 5
-                            <i>></i>
+                    <input type="button" value="<" id="shang"><lable>1<span>到</span>5</lable><input type="button" value=">" id="next">
                 </div>
             </div>
             <div class="jin">
                 <div class="title">
                     <p>今日线索</p>
+                    <i></i>
                 </div>
                 <div class="list">
                     <table id="jin">
@@ -84,10 +91,7 @@
                     </table>
                 </div>
                 <div class="fenye">
-                    <i>
-                        <</i>1
-                            <span>到</span> 5
-                            <i>></i>
+                    <input type="button" value="<" id="shang"><lable>1<span>到</span>5</lable><input type="button" value=">" id="next">
                 </div>
             </div>
         </div>
@@ -101,6 +105,7 @@
             <div class="jiaoyi">
                 <div class="title">
                     <p>本月关闭</p>
+                    <i></i>
                 </div>
                 <div class="list">
                     <table id="jiaoyi">
@@ -116,10 +121,7 @@
                     </table>
                 </div>
                 <div class="fenye">
-                    <i>
-                        <</i>1
-                            <span>到</span>5
-                            <i>></i>
+                    <input type="button" value="<" id="shang"><lable>1<span>到</span>5</lable><input type="button" value=">" id="next">
                 </div>
             </div>
 
